@@ -4,8 +4,8 @@ const firebaseConfig = {
   authDomain: "<daydream-design>.firebaseapp.com",
   projectId: "<daydream-design>",
   storageBucket: "<daydream-design>.appspot.com",
-  messagingSenderId: "<REPLACE_SENDER_ID>",
-  appId: "<REPLACE_APP_ID>"
+  messagingSenderId: "<670534738318>",
+  appId: "<1:670534738318:web:5b4ec59b826e13b3a684df>"
 };
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
