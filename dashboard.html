@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DayDream Designs — Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <img src="assets/logo.png" onerror="this.style.display='none'" class="logo" />
+  <div class="header-text">
+    <h1 class="title">DayDream Designs</h1>
+    <p class="subtitle">AI-Powered Interior Visualizer — Tap & Shop</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card fade-in">
+    <h2>Upload Your Room</h2>
+    <input type="file" id="photo-input" accept="image/*" class="file-input"/>
+    <button id="upload-btn" class="btn" disabled>Generate Design</button>
+    <p class="muted">Upload a clear room photo (jpg/png)</p>
+  </section>
+
+  <section class="card fade-in">
+    <h2>Generated Preview</h2>
+    <div id="preview-wrap">
+      <canvas id="preview-canvas"></canvas>
+    </div>
+  </section>
+
+  <section class="card fade-in" id="products-card" style="display:none">
+    <h2>🛒 Suggested Products</h2>
+    <div id="product-list"></div>
+  </section>
+</main>
+
+<!-- Payment / QR Popup (hidden by default) -->
+<div id="qr-popup" class="qr-popup-backdrop" style="display:none">
+  <div class="qr-popup glass-card">
+    <div class="qr-header">
+      <h3>Pay • DayDream Designs</h3>
+      <button id="close-qr" class="btn small">✕</button>
+    </div>
+    <div class="qr-body">
+      <img src="assets/qr.png" alt="UPI QR" class="qr-image" />
+      <div class="upi-row">
+        <div class="upi-id">9818408424@fam</div>
+        <button id="copy-upi" class="btn small">Copy</button>
+      </div>
+
+      <div class="qr-actions">
+        <label class="qr-note">Scan & pay via your UPI app.</label>
+        <div style="margin-top:12px;">
+          <input type="file" id="payment-screenshot" accept="image/*" />
+        </div>
+        <div style="margin-top:12px;">
+          <button id="confirm-paid" class="btn full">I Have Paid — Verify</button>
+        </div>
+        <div style="margin-top:8px">
+          <button id="cancel-pay" class="btn full red">Cancel</button>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:10px;font-size:13px">After uploading the screenshot, the system will unlock image generation.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <button id="logout" class="btn red">Logout</button>
+  <p>© DayDream Designs</p>
+</footer>
+
+<!-- Firebase libs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+
+<!-- Dashboard logic -->
+<script src="dashboard.js"></script>
+</body>
+</html>
