@@ -1,9 +1,9 @@
 // ====== Firebase config (REPLACE these with your own Firebase project values) ======
 const firebaseConfig = {
   apiKey: "<REPLACE_API_KEY>",
-  authDomain: "<REPLACE_PROJECT>.firebaseapp.com",
-  projectId: "<REPLACE_PROJECT>",
-  storageBucket: "<REPLACE_PROJECT>.appspot.com",
+  authDomain: "<daydream-design>.firebaseapp.com",
+  projectId: "<daydream-design>",
+  storageBucket: "<daydream-design>.appspot.com",
   messagingSenderId: "<REPLACE_SENDER_ID>",
   appId: "<REPLACE_APP_ID>"
 };
